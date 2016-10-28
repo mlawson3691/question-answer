@@ -5,8 +5,8 @@
     <h3 class='answer-tile'>Answers:</h3>
   {{/if}}
 
-  {{#each model.answers as |answer|}}
-    {{answer-tile answer=answer}}
+  {{#each sortedAnswers as |answer|}}
+    {{answer-tile answer=answer updateAnswer="updateAnswer"}}
   {{else}}
 
   {{/each}}

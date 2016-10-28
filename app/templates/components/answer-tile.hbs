@@ -1,4 +1,11 @@
 <div class='well answer-tile'>
-  <p class='colored'>{{answer.author}} says:</p>
-  <h4>{{answer.content}}</h4>
+    <div class='left-div'>
+      <button {{action 'upvote' answer}} class='btn btn-icon'><img class='arrows' src='/assets/images/up.svg' alt='upvote'></button>
+      <h3 class='answer-score'>{{answer.score}}</h3>
+      <button {{action 'downvote' answer}} class='btn btn-icon'><img class='arrows' src='/assets/images/down.svg' alt='downvote'></button>
+    </div>
+    <div class='right-div'>
+      <p class='colored'>{{answer.author}} says:</p>
+      <h4>{{answer.content}}</h4>
+    </div>
 </div>

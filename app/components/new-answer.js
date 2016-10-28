@@ -7,7 +7,8 @@ export default Ember.Component.extend({
       var params = {
         content: this.get('content'),
         author: this.get('author'),
-        question: this.get('question')
+        question: this.get('question'),
+        score: 0
       };
       if (params.content === undefined || params.author === undefined) {
         this.set('error', true);

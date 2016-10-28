@@ -5,6 +5,9 @@ export default Ember.Route.extend({
     return this.store.findRecord('question', params.question_id);
   },
 
+  sortedAnswers: Ember.computed.sort('model.answers', 'sortDefinition'),
+  sortDefinition: ['score'],
+
   actions: {
     update(question, params) {
       Object.keys(params).forEach(function(key) {
@@ -22,6 +25,14 @@ export default Ember.Route.extend({
         return question.save();
       });
       this.transitionTo('question', question);
+    },
+    updateAnswer(answer, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key] !== undefined) {
+          answer.set(key, params[key]);
+        }
+      });
+      answer.save();
     }
   }
 });

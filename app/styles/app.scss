@@ -89,9 +89,35 @@ a {
   font-size: 1.75em;
 }
 
+.btn-icon {
+  background: transparent;
+  width: 50px;
+}
+
+.arrows {
+  width: 100%;
+}
+
 // CONTENT
 
 .answer-tile {
   width: 90%;
   margin-left: 5%;
+}
+
+.answer-score {
+  width: 50px;
+  margin: 0;
+  text-align: center;
+}
+
+.left-div {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.right-div {
+  position: relative;
+  display: inline-block;
+  top: -20px;
 }
