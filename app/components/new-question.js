@@ -7,7 +7,8 @@ export default Ember.Component.extend({
       var params = {
         content: this.get('content'),
         author: this.get('author'),
-        notes: this.get('notes')
+        notes: this.get('notes'),
+        date: new Date()
       };
       if (params.content === undefined || params.author === undefined || params.notes === undefined) {
         this.set('error', true);

@@ -1,9 +1,6 @@
 <div class='row'>
   <div class='col-sm-7'>
-    <h3>All Questions:</h3>
-    {{#each model as |question|}}
-      {{question-tile question=question}}
-    {{/each}}
+    {{question-list questions=model}}
   </div>
   <div class='col-sm-5'>
     {{new-question saveQuestion="saveQuestion"}}
