@@ -17,6 +17,10 @@ hr {
   margin-left: 10%;
 }
 
+.colored {
+  color: $primary;
+}
+
 // HEADER
 
 .header-font {
@@ -83,4 +87,11 @@ a {
   width: 100%;
   font-family: 'Coiny', cursive;
   font-size: 1.75em;
+}
+
+// CONTENT
+
+.answer-tile {
+  width: 90%;
+  margin-left: 5%;
 }

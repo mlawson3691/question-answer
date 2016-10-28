@@ -1,8 +1,14 @@
 <div>
   {{question-detail question=model update="update"}}
 
+  {{#if model.answers}}
+    <h3 class='answer-tile'>Answers:</h3>
+  {{/if}}
+
   {{#each model.answers as |answer|}}
     {{answer-tile answer=answer}}
+  {{else}}
+
   {{/each}}
 
   {{new-answer saveAnswer="saveAnswer" question=model}}
