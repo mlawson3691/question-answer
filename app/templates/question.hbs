@@ -1,10 +1,9 @@
 <div>
-  <h2 class='header-font'>{{model.content}}</h2>
-  {{#each model.answers as |answer|}}
-    <p>{{answer.content}}</p>
-  {{/each}}
+  {{question-detail question=model update="update"}}
 
-  {{update-question question=model update="update"}}
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
 
   {{new-answer saveAnswer="saveAnswer" question=model}}
 </div>

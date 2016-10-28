@@ -17,5 +17,7 @@
     <button {{action 'cancelEdit'}} class='btn btn-link'>Cancel</button>
   </form>
 {{else}}
-  <button {{action 'editQuestion'}} class='btn btn-link'>Edit this question</button>
+  <p class='pull-right'>
+    Is this your question?<button {{action 'editQuestion'}} class='btn btn-link'>Edit it here!</button>
+  </p>
 {{/if}}

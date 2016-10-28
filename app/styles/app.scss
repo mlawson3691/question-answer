@@ -47,11 +47,20 @@ hr {
 
 // LINKS & BUTTONS
 
-a, .btn-link {
+a {
   color: $darkGray;
 
   &:hover {
     color: $primary;
+    text-decoration: none;
+  }
+}
+
+.btn-link {
+  color: $primary;
+
+  &:hover {
+    color: $secondary;
     text-decoration: none;
   }
 }
@@ -70,7 +79,7 @@ a, .btn-link {
 }
 
 .btn-lg {
-  padding: 15px 50px;
+  padding: 10px 50px;
   width: 100%;
   font-family: 'Coiny', cursive;
   font-size: 1.75em;
