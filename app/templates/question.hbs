@@ -1,6 +1,8 @@
 <h1>{{model.content}}</h1>
-<!-- {{#each model.answers as |answer|}}
+{{#each model.answers as |answer|}}
   <p>{{answer.content}}</p>
-{{/each}} -->
+{{/each}}
 
 {{update-question question=model update="update"}}
+
+{{new-answer saveAnswer="saveAnswer" question=model}}
