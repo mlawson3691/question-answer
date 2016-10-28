@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  error: false,
   actions: {
     saveQuestion() {
       var params = {
@@ -8,10 +9,15 @@ export default Ember.Component.extend({
         author: this.get('author'),
         notes: this.get('notes')
       };
-      this.set('content', '');
-      this.set('notes', '');
-      this.set('author', '');
-      this.sendAction('saveQuestion', params);
+      if (params.content === undefined || params.author === undefined || params.notes === undefined) {
+        this.set('error', true);
+      } else {
+        this.set('content', '');
+        this.set('notes', '');
+        this.set('author', '');
+        this.set('error', false);
+        this.sendAction('saveQuestion', params);
+      }
     }
   }
 });

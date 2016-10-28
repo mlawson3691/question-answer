@@ -8,5 +8,8 @@
     <label for='author'>Your name:</label>
     {{input value=author id='author' class='form-control'}}
   </div>
+  {{#if error}}
+    <h4 class='colored'>Error: Please complete all fields before submitting.</h4>
+  {{/if}}
   <button {{action 'saveAnswer'}} class='btn btn-main'>Submit</button>
 </form>

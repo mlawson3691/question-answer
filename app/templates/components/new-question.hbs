@@ -12,5 +12,8 @@
     <label for='author'>Your name:</label>
     {{input value=author id='author' class='form-control'}}
   </div>
+  {{#if error}}
+    <h4 class='colored answer-tile'>Error: You must complete all fields before submitting your question</h4>
+  {{/if}}
   <button {{action 'saveQuestion'}} class='btn btn-main btn-lg'>Ask</button>
 </form>
