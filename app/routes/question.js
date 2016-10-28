@@ -5,9 +5,6 @@ export default Ember.Route.extend({
     return this.store.findRecord('question', params.question_id);
   },
 
-  sortedAnswers: Ember.computed.sort('model.answers', 'sortDefinition'),
-  sortDefinition: ['score'],
-
   actions: {
     update(question, params) {
       Object.keys(params).forEach(function(key) {

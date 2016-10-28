@@ -5,11 +5,7 @@
     <h3 class='answer-tile'>Answers:</h3>
   {{/if}}
 
-  {{#each sortedAnswers as |answer|}}
-    {{answer-tile answer=answer updateAnswer="updateAnswer"}}
-  {{else}}
-
-  {{/each}}
+  {{answer-list answers=model.answers updateAnswer="updateAnswer"}}
 
   {{new-answer saveAnswer="saveAnswer" question=model}}
 </div>
