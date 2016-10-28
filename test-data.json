@@ -1,0 +1,35 @@
+{
+  "questions": [{
+    "content": "Why is the sky blue?",
+    "author": "Bob Bobberson",
+    "notes": "I really need to know!",
+    "answers": [0, 1]
+  },
+  {
+    "content": "What is the best way to eat an ice cream cone?",
+    "author": "Stephen R.",
+    "notes": "I love ice cream.",
+    "answers": [2]
+  },
+  {
+    "content": "How do you bake a cake?",
+    "author": "Wannabe cake baker",
+    "notes": "mmm...cake",
+    "answers": []
+  }],
+  "answers": [{
+    "content": "Because air.",
+    "author": "Mr. Obvious",
+    "question": 0
+  },
+  {
+    "content": "Molecules.",
+    "author": "Mrs. Science",
+    "question": 0
+  },
+  {
+    "content": "You eat it all in one bite.",
+    "author": "ThatsHowIRoll",
+    "question": 1
+  }]
+}
