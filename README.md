@@ -1,7 +1,12 @@
-# Question-answer
+# Question-Answer App
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### An app using Ember 2, October 28th, 2016
+
+#### By Mark Lawson
+
+## Description
+
+This application is an exercise in Ember 2 utilizing models, components, and routes. The application serves as a question and answer forum for users to present questions to the world and to answer other users' questions. The application is set up with Firebase for managing data and Sass for styling.
 
 ## Prerequisites
 
@@ -15,7 +20,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/mlawson3691/question-answer` this repository
 * `cd question-answer`
 * `npm install`
 * `bower install`
@@ -39,9 +44,17 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+## Specifications
 
-Specify what it takes to deploy your app.
+* The program will display a question to the user.
+
+* The program will create a new questions.
+
+* The program will edit questions.
+
+* The program will display answers to a question.
+
+* The program will add new answers to a question.
 
 ## Further Reading / Useful Links
 
@@ -51,3 +64,8 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+### License
+
+*This application is licensed under the MIT license.*
+
+Copyright (c) 2016 Mark Lawson
