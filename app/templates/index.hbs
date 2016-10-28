@@ -1,0 +1,10 @@
+<div class='container'>
+  <ul>
+    {{#each model as |question|}}
+      <li>
+        <h4>{{question.author}} asks:</h4>
+        <p>{{question.content}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</div>
