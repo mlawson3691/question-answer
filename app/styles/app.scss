@@ -1,0 +1,77 @@
+$primary: #8f6496;
+$secondary: #ba8bc1;
+$darkGray: #464f41;
+$lightGray: #9ba894;
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: $darkGray;
+}
+
+hr {
+  border-color: $lightGray;
+}
+
+.container {
+  width: 80%;
+  margin-left: 10%;
+}
+
+// HEADER
+
+.header-font {
+  font-family: 'Coiny', cursive;
+  color: $primary;
+}
+
+.header {
+  padding-top: 50px;
+  background: $primary;
+  border-bottom: 1px solid $darkGray;
+  margin-bottom: 20px;
+
+  a {
+    color: white;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    font-size: 4em;
+    color: white;
+  }
+}
+
+
+// LINKS & BUTTONS
+
+a, .btn-link {
+  color: $darkGray;
+
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+.btn-main, .btn-main:focus {
+  background: $primary;
+  color: white;
+  border: 1px solid white;
+  outline: 0 !important;
+}
+
+.btn-main:hover {
+  background: $secondary;
+  color: white;
+  border: 1px solid $primary;
+}
+
+.btn-lg {
+  padding: 15px 50px;
+  width: 100%;
+  font-family: 'Coiny', cursive;
+  font-size: 1.75em;
+}
