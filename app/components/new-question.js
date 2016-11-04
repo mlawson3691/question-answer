@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import moment from 'moment';
 
 export default Ember.Component.extend({
   error: false,
@@ -8,7 +9,7 @@ export default Ember.Component.extend({
         content: this.get('content'),
         author: this.get('author'),
         notes: this.get('notes'),
-        date: new Date()
+        date: moment()
       };
       if (params.content === undefined || params.author === undefined || params.notes === undefined) {
         this.set('error', true);

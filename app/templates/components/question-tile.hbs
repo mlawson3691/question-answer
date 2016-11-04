@@ -1,7 +1,8 @@
 {{#link-to 'question' question.id}}
   <div class='well'>
     <h3>{{question.content}}</h3>
-    <p class='colored pull-right'>Answers: {{question.answerCount}}</p>
     <p>by {{question.author}}</p>
+    <p class='colored pull-right'>Answers: {{question.answerCount}}</p>
+    <p class='faded'>on {{date-format question.date}}</p>
   </div>
 {{/link-to}}
