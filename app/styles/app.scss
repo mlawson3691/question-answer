@@ -59,6 +59,14 @@ hr {
       text-decoration: none;
     }
   }
+
+  .dropdown-menu li a {
+    color: $primary !important;
+  }
+
+  .dropdown-toggle:focus {
+    color: $primary !important;
+  }
 }
 
 .modal-header {

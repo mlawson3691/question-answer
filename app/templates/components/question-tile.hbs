@@ -2,7 +2,7 @@
   <div class='well'>
     <h3>{{question.content}}</h3>
     <p>by {{question.author}}</p>
-    <p class='colored pull-right'>Answers: {{question.answerCount}}</p>
+    <p class='colored pull-right'>Answers: {{question.answers.length}}</p>
     <p class='faded'>on {{date-format question.date}}</p>
   </div>
 {{/link-to}}

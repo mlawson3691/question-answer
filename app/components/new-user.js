@@ -4,13 +4,13 @@ export default Ember.Component.extend({
   error: false,
   actions: {
     signUp() {
-      if (this.get('username') !== undefined && this.get('username') !== "" && this.get('password') !== undefined && this.get('password') !== "") {
+      if (this.get('newUsername') !== undefined && this.get('newUsername') !== "" && this.get('newPassword') !== undefined && this.get('newPassword') !== "") {
         var params = {
-          username: this.get('username'),
-          password: this.get('password')
+          username: this.get('newUsername'),
+          password: this.get('newPassword')
         }
-        this.set('username', '');
-        this.set('password', '');
+        this.set('newUsername', '');
+        this.set('newPassword', '');
         this.sendAction('signUp', params);
         this.$('#signUpModal').modal('toggle');
         this.set('error', false);
