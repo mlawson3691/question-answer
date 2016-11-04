@@ -1,15 +1,21 @@
 <h3>Ask a New Question:</h3>
-<form class='well'>
-  <div class='form-group'>
-    <label for='content'>Question:</label>
-    {{textarea value=content id='content' rows='8' class='form-control'}}
+{{#if session.isLoggedIn}}
+  <form class='well'>
+    <div class='form-group'>
+      <label for='content'>Question:</label>
+      {{textarea value=content id='content' rows='8' class='form-control'}}
+    </div>
+    <div class='form-group'>
+      <label for='notes'>Additional notes:</label>
+      {{textarea value=notes id='notes' rows='3' class='form-control'}}
+    </div>
+    {{#if error}}
+      <h4 class='colored answer-tile'>Error: You must complete all fields before submitting your question</h4>
+    {{/if}}
+    <button {{action 'saveQuestion'}} class='btn btn-main btn-lg'>Ask</button>
+  </form>
+{{else}}
+  <div class='well text-center'>
+    <a href="#" data-toggle="modal" data-target="#logInModal"><h4>Log in to ask a question</h4></a>
   </div>
-  <div class='form-group'>
-    <label for='notes'>Additional notes:</label>
-    {{textarea value=notes id='notes' rows='3' class='form-control'}}
-  </div>
-  {{#if error}}
-    <h4 class='colored answer-tile'>Error: You must complete all fields before submitting your question</h4>
-  {{/if}}
-  <button {{action 'saveQuestion'}} class='btn btn-main btn-lg'>Ask</button>
-</form>
+{{/if}}

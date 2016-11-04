@@ -13,8 +13,10 @@ export default Ember.Component.extend({
           question: this.get('question'),
           upvotes: 0,
           downvotes: 0,
+          voters: [this.get('session').get('currentUser').get('username')],
           date: moment()
         };
+        console.log(params.voters);
         if (params.content === undefined) {
           this.set('error', true);
         } else {

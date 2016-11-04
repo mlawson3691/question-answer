@@ -6,6 +6,7 @@ export default DS.Model.extend({
   question: DS.belongsTo('question', { async: true }),
   upvotes: DS.attr(),
   downvotes: DS.attr(),
+  voters: DS.attr(),
   date: DS.attr('string'),
 
   score: Ember.computed('upvotes', 'downvotes', function() {
