@@ -9,7 +9,6 @@ export default DS.Model.extend({
   date: DS.attr('string'),
 
   score: Ember.computed('upvotes', 'downvotes', function() {
-    console.log(this.get('upvotes') + ', ' + this.get('downvotes'));
     return this.get('upvotes') - this.get('downvotes');
   })
 });

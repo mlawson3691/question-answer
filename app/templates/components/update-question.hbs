@@ -3,21 +3,22 @@
     <h3>Edit this Question</h3>
     <div class='form-group'>
       <label for='content'>Question:</label>
-      {{textarea value=question.content id='content' rows='8' class='form-control'}}
+      {{textarea value=content id='updateContent' rows='8' class='form-control'}}
     </div>
     <div class='form-group'>
       <label for='notes'>Additional notes:</label>
-      {{textarea value=question.notes id='notes' rows='3' class='form-control'}}
+      {{textarea value=notes id='updateNotes' rows='3' class='form-control'}}
     </div>
-    <div class='form-group'>
-      <label for='author'>Your name:</label>
-      {{input value=question.author id='author' class='form-control'}}
-    </div>
+    {{#if error}}
+      <p class='colored answer-tile'>{{error}}</p>
+    {{/if}}
     <button {{action 'update' question}} class='btn btn-main'>Edit</button>
     <button {{action 'cancelEdit'}} class='btn btn-link'>Cancel</button>
   </form>
 {{else}}
-  <p class='pull-right'>
-    Is this your question?<button {{action 'editQuestion'}} class='btn btn-link'>Edit it here!</button>
-  </p>
+  {{#if isOwner}}
+    <p class='pull-right'>
+      Is this your question?<button {{action 'editQuestion'}} class='btn btn-link'>Edit it here!</button>
+    </p>
+  {{/if}}
 {{/if}}

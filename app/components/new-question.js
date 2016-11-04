@@ -13,7 +13,7 @@ export default Ember.Component.extend({
           notes: this.get('notes'),
           date: moment()
         };
-        if (params.content === undefined || params.author === undefined || params.notes === undefined) {
+        if (params.content === undefined ||  params.notes === undefined) {
           this.set('error', true);
         } else {
           this.set('content', '');

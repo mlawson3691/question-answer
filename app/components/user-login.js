@@ -17,7 +17,6 @@ export default Ember.Component.extend({
             _this.$('#logInModal').modal('toggle');
             _this.set('formError', false);
             _this.set('loginError', false);
-            console.log(_this.get('session').get('isLoggedIn'));
           } else {
             _this.set('loginError', true);
             _this.set('password', '');
