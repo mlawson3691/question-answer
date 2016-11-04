@@ -1,0 +1,19 @@
+{{#if isOwner}}
+  <div class='row'>
+    <div class='col-sm-7'>
+      <h3>My Questions:</h3>
+      {{question-list questions=user.questions}}
+      <hr>
+      <h3>Questions I've Answered:</h3>
+      {{question-list questions=answeredQuestions}}
+    </div>
+    <div class='col-sm-5'>
+      {{new-question saveQuestion="saveQuestion"}}
+    </div>
+  </div>
+{{else}}
+  <div class='well text-center'>
+    <h3>You do not have access to this page</h3>
+    <h4>{{#link-to 'index'}}Home{{/link-to}}</h4>
+  </div>
+{{/if}}
