@@ -1,11 +1,17 @@
-<h3>Answer this Question</h3>
-<form class='well'>
-  <div class='form-group'>
-    <label for='content'>Your Answer:</label>
-    {{textarea value=content id='content' rows='5' class='form-control'}}
+{{#if session.isLoggedIn}}
+  <h3>Answer this Question</h3>
+  <form class='well'>
+    <div class='form-group'>
+      <label for='content'>Your Answer:</label>
+      {{textarea value=content id='content' rows='5' class='form-control'}}
+    </div>
+    {{#if error}}
+      <h4 class='colored'>Error: Please complete all fields before submitting.</h4>
+    {{/if}}
+    <button {{action 'saveAnswer'}} class='btn btn-main'>Submit</button>
+  </form>
+{{else}}
+  <div class='well text-center'>
+    <a href="#" data-toggle="modal" data-target="#logInModal"><h4>Log in to answer this question</h4></a>
   </div>
-  {{#if error}}
-    <h4 class='colored'>Error: Please complete all fields before submitting.</h4>
-  {{/if}}
-  <button {{action 'saveAnswer'}} class='btn btn-main'>Submit</button>
-</form>
+{{/if}}
