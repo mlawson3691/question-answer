@@ -17,5 +17,12 @@ export default Ember.Component.extend({
       });
     });
     return output;
-  })
+  }),
+  sortedQuestions: Ember.computed.sort('answeredQuestions', 'sortDefinition'),
+  sortDefinition: ['date:desc'],
+  actions: {
+    saveQuestion(params) {
+      this.sendAction('saveQuestion', params);
+    }
+  }
 });

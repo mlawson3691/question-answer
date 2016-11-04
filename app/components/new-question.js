@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   error: false,
   actions: {
     saveQuestion() {
+      console.log('success');
       if (this.get('session').get('isLoggedIn')){
         var params = {
           content: this.get('content'),
