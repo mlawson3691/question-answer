@@ -5,7 +5,7 @@ export function dateFormat(params) {
   if (date.format('MMM DD, YYYY') === moment().format('MMM DD, YYYY')) {
     return date.fromNow();
   } else {
-    return date.format('MMM DD, YYYY');
+    return 'on ' + date.format('MMM DD, YYYY');
   }
 }
 
