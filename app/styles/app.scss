@@ -155,6 +155,16 @@ a {
   text-align: center;
 }
 
+.downvotes {
+  color: red;
+  font-size: 1em;
+}
+
+.upvotes {
+  color: green;
+  font-size: 1em;
+}
+
 .left-div {
   display: inline-block;
   margin-right: 20px;
@@ -163,5 +173,5 @@ a {
 .right-div {
   position: relative;
   display: inline-block;
-  top: -20px;
+  top: -40px;
 }

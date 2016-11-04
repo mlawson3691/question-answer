@@ -9,7 +9,8 @@ export default Ember.Component.extend({
         content: this.get('content'),
         author: this.get('author'),
         question: this.get('question'),
-        score: 0,
+        upvotes: 0,
+        downvotes: 0,
         date: moment()
       };
       if (params.content === undefined || params.author === undefined) {
