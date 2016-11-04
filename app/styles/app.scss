@@ -21,31 +21,52 @@ hr {
   color: $primary;
 }
 
-// HEADER
+// NAVBAR
 
-.header-font {
+.header-font, .navbar-brand {
   font-family: 'Coiny', cursive;
   color: $primary;
 }
 
-.header {
-  padding-top: 50px;
+.navbar {
+  padding-top: 60px;
   background: $primary;
   border-bottom: 1px solid $darkGray;
   margin-bottom: 20px;
 
-  a {
+  .navbar-brand {
+    font-size: 4em;
     color: white;
+    text-align: center;
+    padding-bottom: 50px;
 
     &:hover, &:focus {
-      text-decoration: none;
+      color: white;
     }
   }
 
-  h1 {
-    font-size: 4em;
-    color: white;
+  li a {
+    color: white !important;
+    font-size: 1.2em;
+    margin-top: 15px;
+
+    &:hover, &:focus {
+      font-weight: bold;
+      text-decoration: none;
+    }
   }
+}
+
+.modal-header {
+  background: $primary;
+  color: white;
+  font-family: 'Coiny', cursive;
+}
+
+.white-x {
+  color: white;
+  opacity: 1;
+  text-shadow: 1px 1px 1px $darkGray;
 }
 
 
@@ -82,6 +103,19 @@ a {
   border: 1px solid $primary;
 }
 
+.btn-inverse, .btn-inverse:focus {
+  background: white;
+  color: $darkGray;
+  border: 1px solid $primary;
+  outline: 0 !important;
+}
+
+.btn-inverse:hover {
+  background: white;
+  color: $primary;
+  border: 1px solid $secondary;
+}
+
 .btn-lg {
   padding: 10px 50px;
   width: 100%;
@@ -96,6 +130,12 @@ a {
 
 .arrows {
   width: 100%;
+}
+
+.btn-nav {
+  margin-top: 45px;
+  margin-right: 10px;
+  float: right;
 }
 
 // CONTENT
