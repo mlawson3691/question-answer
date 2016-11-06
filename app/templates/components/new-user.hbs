@@ -9,6 +9,9 @@
         {{#if error}}
           <h4 class='colored'>Error: You must complete all fields before submitting</h4>
         {{/if}}
+        {{#if duplicateError}}
+          <h4 class='colored'>Error: That username is already taken</h4>
+        {{/if}}
         <div class='form-group'>
           <label>Username:</label>
           {{input id="newUsername" value=newUsername class='form-control' enter="signUp"}}
