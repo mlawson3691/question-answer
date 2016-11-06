@@ -9,15 +9,15 @@ export default Ember.Component.extend({
       console.log('success');
       if (this.get('session').get('isLoggedIn')){
         var params = {
-          content: this.get('content'),
+          contents: this.get('contents'),
           author: this.get('session').get('currentUser'),
           notes: this.get('notes'),
           date: moment()
         };
-        if (params.content === undefined ||  params.notes === undefined) {
+        if (params.contents === undefined ||  params.notes === undefined) {
           this.set('error', true);
         } else {
-          this.set('content', '');
+          this.set('contents', '');
           this.set('notes', '');
           this.set('author', '');
           this.set('error', false);

@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     saveAnswer(question) {
       if (this.get('session').get('isLoggedIn')){
         var params = {
-          content: this.get('content'),
+          contents: this.get('contents'),
           author: this.get('session').get('currentUser'),
           question: this.get('question'),
           upvotes: 0,

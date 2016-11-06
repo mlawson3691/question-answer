@@ -22,7 +22,7 @@ export default Ember.Component.extend({
     update(question) {
       if (this.get('session').isCurrentUser(this.get('question').get('author').content)) {
         var params = {
-          content: this.get('content'),
+          contents: this.get('contents'),
           notes: this.get('notes')
         };
         this.set('editQuestion', false);

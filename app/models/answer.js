@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  content: DS.attr(),
+  contents: DS.attr(),
   author: DS.belongsTo('user', { async: true }),
   question: DS.belongsTo('question', { async: true }),
   upvotes: DS.attr(),
