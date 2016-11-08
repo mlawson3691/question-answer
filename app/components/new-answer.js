@@ -17,7 +17,7 @@ export default Ember.Component.extend({
           date: moment()
         };
         console.log(params.voters);
-        if (params.content === undefined) {
+        if (params.contents === undefined) {
           this.set('error', true);
         } else {
           this.set('content', '');

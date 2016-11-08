@@ -1,9 +1,6 @@
 <div class='well answer-tile'>
-  {{#if notLoggedIn}}
-    <h4 class='colored answer-tile'>Error: You must be logged in to vote for an answer</h4>
-  {{/if}}
-  {{#if alreadyVoted}}
-    <h4 class='colored answer-tile'>Error: You already voted for this answer</h4>
+  {{#if error}}
+    <h4 class='colored answer-tile'>Error: {{error}}</h4>
   {{/if}}
   <div class='left-div'>
     <p class='upvotes answer-score'>+{{answer.upvotes}}</p>
