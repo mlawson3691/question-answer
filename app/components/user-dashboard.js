@@ -9,21 +9,20 @@ export default Ember.Component.extend({
       return false;
     }
   }),
-  answeredQuestions: Ember.computed('model.answers', function() {
+  answeredQuestions: Ember.computed('user.answers', function() {
+    var allAnsweredQuestions = [];
     var output = [];
     this.get('user').get('answers').then(function(results) {
       results.forEach(function(answer) {
-        output.addObject(answer.get('question'));
+        allAnsweredQuestions.addObject(answer.get('question'));
       });
+      console.log(allAnsweredQuestions);
+      allAnsweredQuestions.forEach(function(question) {
+        if (!output.includes(question)) {
+          output.addObject(question);
+        }
+      });
+      return allAnsweredQuestions;
     });
-    return output;
   })
-  // ,
-  // sortedQuestions: Ember.computed.sort('answeredQuestions', 'sortDefinition'),
-  // sortDefinition: ['date:desc'],
-  // actions: {
-  //   saveQuestion(params) {
-  //     this.sendAction('saveQuestion', params);
-  //   }
-  // }
 });
