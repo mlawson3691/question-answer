@@ -16,8 +16,7 @@ export default Ember.Component.extend({
           voters: [this.get('session').get('currentUser').get('username')],
           date: moment()
         };
-        console.log(params.voters);
-        if (params.contents === undefined) {
+        if (params.contents === undefined || params.contents === '') {
           this.set('error', true);
         } else {
           this.set('content', '');
