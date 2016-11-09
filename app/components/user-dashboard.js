@@ -10,19 +10,27 @@ export default Ember.Component.extend({
     }
   }),
   answeredQuestions: Ember.computed('user.answers', function() {
-    var allAnsweredQuestions = [];
     var output = [];
-    this.get('user').get('answers').then(function(results) {
-      results.forEach(function(answer) {
-        allAnsweredQuestions.addObject(answer.get('question'));
+    this.get('user').get('answers').then(function(answers) {
+      answers.forEach(function(answer) {
+        output.addObject(answer.get('question'));
       });
-      console.log(allAnsweredQuestions);
-      allAnsweredQuestions.forEach(function(question) {
-        if (!output.includes(question)) {
-          output.addObject(question);
+    });
+    return output;
+  }),
+  uniqueQuestions: Ember.computed('answeredQuestions.[]', function() {
+    var output = [];
+    this.get('answeredQuestions').forEach(function(question) {
+      var found = false;
+      output.forEach(function(displayedQuestion) {
+        if (question.content.id === displayedQuestion.content.id) {
+          found = true;
         }
       });
-      return allAnsweredQuestions;
+      if (found === false) {
+        output.addObject(question);
+      }
     });
+    return output;
   })
 });
